@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Banker home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<style>
+h1 {
+  text-align: center;
+}
+</style>
+
+</head>
+<body>
+<h1 style="color: white;">Banker Solutions</h1>
+<!-- partial:index.partial.html -->
+<div class="login-box" align="center" >
+  <h2>Home</h2>
+  <form>
+
+    <a href="/get_register">
+
+      Register
+    </a><br>
+
+
+    <a href="/withdraw">
+
+      withdraw
+    </a><br>
+
+
+    <a href="/deposit">
+
+      deposit
+    </a><br>
+
+
+    <a href="/check_bal">
+      Check Balance
+    </a><br>
+
+  </form>
+</div>
+<!-- partial -->
+  
+</body>
+</html>

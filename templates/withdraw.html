@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Withdraw</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="login-box">
+  <h2>Withdraw</h2>
+  <form id="wth" action="{{ url_for ('toWithdraw') }}" method="post">
+    <div class="user-box">
+      <input type="text" name="accNo" required="accNo">
+      <label>Account Number</label>
+    </div>
+
+    <div class="user-box">
+      <input type="text" name="withdraw_bal" required="withdraw_bal">
+      <label>Enter Amount</label>
+    </div>
+
+    <a href="#" onclick="document.querySelector('#wth').submit()">
+
+      Withdraw
+    </a>
+    <div class="user-box">
+      <label>{{display }}<label></label>
+
+    </div>
+  </form>
+
+
+</div>
+<!-- partial -->
+
+</body>
+</html>

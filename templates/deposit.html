@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Deposit</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="login-box">
+  <h2>Deposit</h2>
+  <form id="asp" action="{{ url_for('to_deposit') }}" method="post">
+    <div class="user-box">
+      <input type="text" name="accNo" required="">
+      <label>Account Number</label>
+    </div>
+
+    <div class="user-box">
+      <input type="text" name="deposit_amt" required="">
+      <label>Deposit Amount</label>
+    </div>
+
+    <a href="#" onclick="document.querySelector('#asp').submit()">
+
+      Deposit
+    </a>
+    <div class="user-box">
+      <label>{{display }}<label></label>
+    </div>
+
+  </form>
+
+
+</div>
+<!-- partial -->
+
+</body>
+</html>
