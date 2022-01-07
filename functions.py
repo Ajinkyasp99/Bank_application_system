@@ -7,8 +7,8 @@ def bankuser(data):
 
     # client = pymongo.MongoClient("mongodb://127.0.0.1:27017/")
     client = pymongo.MongoClient("mongodb+srv://ajinkya:ajinkya@cluster0.gp5dx.mongodb.net/test")
-    db = client["acc_holdersDB"]
-    collection = db["userinfo"]
+    db = client["Bank_data"]
+    collection = db["user_info"]
     data["accNo"]= " ".join([str(random.randint(0,999)).zfill(3) for _ in range(2)])
     data ["balance"] = 0
     __pipeline__ = [
@@ -31,8 +31,8 @@ def bankuser(data):
 def bank_balance(accNo):
     # client = pymongo.MongoClient("mongodb://127.0.0.1:27017/")
     client = pymongo.MongoClient("mongodb+srv://ajinkya:ajinkya@cluster0.gp5dx.mongodb.net/test")
-    db = client["acc_holdersDB"]
-    collection = db["userinfo"]
+    db = client["Bank_data"]
+    collection = db["user_info"]
     __pieline__ = [
                     {
                         '$match':{
@@ -53,8 +53,8 @@ def bank_balance(accNo):
 def withdrawl(data):
     # client = pymongo.MongoClient("mongodb://127.0.0.1:27017/")
     client = pymongo.MongoClient("mongodb+srv://ajinkya:ajinkya@cluster0.gp5dx.mongodb.net/test")
-    db = client["acc_holdersDB"]
-    collection = db["userinfo"]
+    db = client["Bank_data"]
+    collection = db["user_info"]
     __pieline__ = [
                     {
                          '$match': {
@@ -78,8 +78,8 @@ def withdrawl(data):
 def deposit(data):
     # client = pymongo.MongoClient("mongodb://127.0.0.1:27017/")
     client = pymongo.MongoClient("mongodb+srv://ajinkya:ajinkya@cluster0.gp5dx.mongodb.net/test")
-    db = client["acc_holdersDB"]
-    collection = db["userinfo"]
+    db = client["Bank_data"]
+    collection = db["user_info"]
     __pieline__ = [
                     {
                          '$match': {
