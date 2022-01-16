@@ -16,7 +16,7 @@ def get_register():
 
 @app.route("/register", methods = ['POST'])
 def register():
-    data = {"Name":request.form["name"],"Gmail":request.form["gmail"],"Phone no":request.form["phone"]}
+    data = {"Name":request.form["name"],"Email":request.form["email"],"Phone no":request.form["phone"]}
     result = fun.bankuser(data)
     return render_template('register.html', display = str(result))
 
